@@ -680,8 +680,8 @@ function MusicPlayer(){
   };
   return(
     <>
-      <audio ref={audioRef} loop>
-  <source src="/music.mp3" type="audio/mpeg" />
+      <audio controls autoPlay loop>
+  <source src={`${import.meta.env.BASE_URL}music.mp3`} type="audio/mpeg" />
 </audio>
       <div className="music-bar">
         <button className="music-btn" onClick={toggle}>{playing?"⏸":"▶"}</button>
