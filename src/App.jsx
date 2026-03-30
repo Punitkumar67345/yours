@@ -680,19 +680,22 @@ function MusicPlayer(){
   };
   return(
     <>
-      <audio controls autoPlay loop>
+    <audio ref={audioRef} loop>
   <source src={`${import.meta.env.BASE_URL}music.mp3`} type="audio/mpeg" />
 </audio>
-      <div className="music-bar">
-        <button className="music-btn" onClick={toggle}>{playing?"⏸":"▶"}</button>
-        <div>
-          <div className="music-title">Tum Hi Ho 💕</div>
-          <div className="music-sub">Pratiksha ❤️</div>
-        </div>
-        <div className={`music-waves${playing?"":" paused"}`}>
-          <div className="mwave"/><div className="mwave"/><div className="mwave"/><div className="mwave"/>
-        </div>
-      </div>
+
+<div className="music-bar">
+  <button className="music-btn" onClick={toggle}>
+    {playing ? "⏸" : "▶"}
+  </button>
+  <div>
+    <div className="music-title">Tum Hi Ho 💕</div>
+    <div className="music-sub">Pratiksha ❤️</div>
+  </div>
+  <div className={`music-waves${playing ? "" : " paused"}`}>
+    <div className="mwave"/><div className="mwave"/><div className="mwave"/><div className="mwave"/>
+  </div>
+</div>
     </>
   );
 }
