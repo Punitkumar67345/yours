@@ -690,7 +690,7 @@ function MusicPlayer(){
   </button>
   <div>
     <div className="music-title">Tum Hi Ho 💕</div>
-    <div className="music-sub">Pratiksha ❤️</div>
+    <div className="music-sub">Yours❤️</div>
   </div>
   <div className={`music-waves${playing ? "" : " paused"}`}>
     <div className="mwave"/><div className="mwave"/><div className="mwave"/><div className="mwave"/>
